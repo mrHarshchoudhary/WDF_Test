@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.video-container {
+  position: relative;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  width: 600px;
+}
+
+video {
+  width: 500px;
+  height: 500px;
+  border-bottom: 3px solid #444;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.4);
+}
+
+button,
+select,
+input[type="range"] {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 14px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+button:hover,
+select:hover,
+input[type="range"]:hover {
+  transform: scale(1.1);
+  color: #00ffcc;
+}
+
+input[type="range"] {
+  width: 150px;
+  accent-color: #00ffcc;
+}
+
+select {
+  background-color: #222;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+
+#timeDisplay {
+  font-size: 14px;
+  color: #00ffcc;
+}
+
+button#fullscreenBtn {
+  font-size: 16px;
+  padding: 5px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+  animation: rotateBackground 20s linear infinite;
+  z-index: -1;
+}
+
+/* @keyframes rotateBackground {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
