@@ -1,91 +1,102 @@
-/* General Styling */
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
+  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  width: 90%;
-  max-width: 500px;
-}
-
-/* Input and Button Styling */
-.input-container,
-.filter-container {
-  margin: 10px 0;
-}
-
-input {
-  padding: 10px;
-  margin: 5px;
-  font-size: 16px;
-  border: none;
+  background-color: #ffffff;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  outline: none;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.input-container, .filter-container {
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
-  padding: 10px 15px;
-  font-size: 16px;
+  background-color: #4CAF50;
   color: white;
-  background-color: #007bff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
 }
 
-/* Task List Styling */
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 20px auto;
 }
 
 li {
-  background: white;
-  color: black;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
 }
 
-li span {
-  font-size: 16px;
-  flex: 1;
+li .task-info {
+  margin-bottom: 5px;
+}
+
+li .task-category {
+  font-size: 0.9em;
+  color: #666;
+}
+
+li .task-actions {
+  margin-top: 10px;
 }
 
 li button {
-  background-color: red;
-  color: white;
-  padding: 8px 12px;
-  font-size: 14px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  margin-right: 5px;
+  padding: 5px 10px;
 }
 
-li button:hover {
-  background-color: darkred;
+li button.edit-btn {
+  background-color: #2196F3;
+}
+
+li button.edit-btn:hover {
+  background-color: #0b7dda;
+}
+
+@media (min-width: 768px) {
+  .input-container, .filter-container {
+      display: flex;
+      gap: 10px;
+  }
+
+  .input-container > *, .filter-container > * {
+      flex: 1;
+      margin-bottom: 0;
+  }
+
+  button {
+      flex: 0 0 auto;
+  }
 }
